@@ -1,0 +1,13 @@
+{
+    "name": "junior/memory",
+    "type": "project",
+    "require": {
+        "symfony/process": "^3.4"
+    },
+    "authors": [
+        {
+            "name": "Evaldo Bento",
+            "email": "evaldojuniorbento@gmail.com"
+        }
+    ]
+}

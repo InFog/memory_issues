@@ -1,0 +1,24 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: memoryissues
+spec:
+  template:
+    spec:
+      containers:
+      - name: memoryissues
+        image: infog/memoryissues
+        command:
+          - "php"
+          - "download.php"
+        env:
+        - name: APP_ENV
+          value: prod
+        resources:
+          requests:
+            cpu: 0.5
+            memory: 128M
+          limits:
+            cpu: 2
+            memory: 1024M
+      restartPolicy: OnFailure
